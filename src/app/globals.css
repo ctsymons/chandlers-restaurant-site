@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f8f8f8;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+a {
+  @apply text-primary underline-offset-4 hover:underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
