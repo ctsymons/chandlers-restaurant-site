@@ -8,7 +8,11 @@ html {
 
 body {
   font-family: system-ui, sans-serif;
-  background-color: #f8f8f8;
+  /* Use a remote image to avoid storing binaries in the repo */
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #1f2937;
   line-height: 1.5;
 }
