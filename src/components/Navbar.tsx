@@ -8,8 +8,16 @@ export default function Navbar() {
 
   return (
     <nav className="bg-black/70 text-white">
-      <div className="mx-auto max-w-7xl px-4 py-3 flex justify-between items-center">
-        <Link href="/" className="site-title">Chandlers</Link>
+      <div className="mx-auto max-w-7xl px-4 py-6 flex justify-between items-center">
+        <div className="flex flex-col">
+          <Link href="/" className="site-title text-4xl">Chandlers</Link>
+          <button
+            className="mt-2 bg-black text-white px-4 py-2 rounded"
+            style={{ fontFamily: 'Copperplate', fontWeight: 'bold' }}
+          >
+            Book a reservation
+          </button>
+        </div>
         <div className="relative">
           <button
             onClick={() => setOpen(!open)}
