@@ -35,9 +35,21 @@ export default function Navbar() {
                     Reservations
                   </Link>
                 </li>
-                <li className="px-4 py-2 hover:bg-black/60">Our Story</li>
-                <li className="px-4 py-2 hover:bg-black/60">Employment</li>
-                <li className="px-4 py-2 hover:bg-black/60">Contacts</li>
+                <li>
+                  <Link href="/our-story" className="block px-4 py-2 hover:bg-black/60">
+                    Our Story
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/employment" className="block px-4 py-2 hover:bg-black/60">
+                    Employment
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contacts" className="block px-4 py-2 hover:bg-black/60">
+                    Contacts
+                  </Link>
+                </li>
               </ul>
             )}
         </div>
