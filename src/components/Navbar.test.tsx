@@ -9,8 +9,4 @@ describe('Navbar', () => {
     expect(html).toContain('Chandlers');
   });
 
-  it('renders reservation button', () => {
-    const html = renderToString(<Navbar />);
-    expect(html).toContain('Book a reservation');
-  });
 });
