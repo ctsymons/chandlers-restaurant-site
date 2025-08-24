@@ -8,4 +8,5 @@ describe('Navbar', () => {
     const html = renderToString(<Navbar />);
     expect(html).toContain('Chandlers');
   });
+
 });
