@@ -8,4 +8,10 @@ describe('ReservationsPage', () => {
     const html = renderToString(<ReservationsPage />);
     expect(html).toContain('Reservations');
   });
+
+  it('includes a link to find a table', () => {
+    const html = renderToString(<ReservationsPage />);
+    expect(html).toContain('Find a table');
+    expect(html).toContain('https://www.opentable.com/chandlers-a-restaurant?');
+  });
 });
