@@ -21,14 +21,21 @@ export default function Navbar() {
             ☰
           </button>
           {open && (
-            <ul className="absolute right-0 mt-2 w-40 bg-black/80 rounded shadow-lg">
-              <li className="px-4 py-2 hover:bg-black/60">Menu</li>
-              <li className="px-4 py-2 hover:bg-black/60">Reservations</li>
-              <li className="px-4 py-2 hover:bg-black/60">Our Story</li>
-              <li className="px-4 py-2 hover:bg-black/60">Employment</li>
-              <li className="px-4 py-2 hover:bg-black/60">Contacts</li>
-            </ul>
-          )}
+              <ul className="absolute right-0 mt-2 w-40 bg-black/80 rounded shadow-lg">
+                <li className="px-4 py-2 hover:bg-black/60">Menu</li>
+                <li>
+                  <Link
+                    href="/reservations"
+                    className="block px-4 py-2 hover:bg-black/60"
+                  >
+                    Reservations
+                  </Link>
+                </li>
+                <li className="px-4 py-2 hover:bg-black/60">Our Story</li>
+                <li className="px-4 py-2 hover:bg-black/60">Employment</li>
+                <li className="px-4 py-2 hover:bg-black/60">Contacts</li>
+              </ul>
+            )}
         </div>
       </div>
     </nav>
