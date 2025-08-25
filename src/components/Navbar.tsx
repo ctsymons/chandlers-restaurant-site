@@ -29,29 +29,29 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/reservations"
+                    href="/#reservations"
                     className="block px-4 py-2 hover:bg-black/60"
                   >
                     Reservations
                   </Link>
                 </li>
                 <li>
-                  <Link href="/private-events" className="block px-4 py-2 hover:bg-black/60">
+                  <Link href="/#private-events" className="block px-4 py-2 hover:bg-black/60">
                     Private Events
                   </Link>
                 </li>
                 <li>
-                  <Link href="/our-story" className="block px-4 py-2 hover:bg-black/60">
+                  <Link href="/#our-story" className="block px-4 py-2 hover:bg-black/60">
                     Our Story
                   </Link>
                 </li>
                 <li>
-                  <Link href="/employment" className="block px-4 py-2 hover:bg-black/60">
+                  <Link href="/#employment" className="block px-4 py-2 hover:bg-black/60">
                     Employment
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contacts" className="block px-4 py-2 hover:bg-black/60">
+                  <Link href="/#contacts" className="block px-4 py-2 hover:bg-black/60">
                     Contacts
                   </Link>
                 </li>

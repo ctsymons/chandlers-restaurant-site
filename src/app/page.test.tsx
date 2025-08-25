@@ -22,9 +22,9 @@ describe('HomePage', () => {
     // The visible CTA text should be present
     expect(html).toContain('Book a reservation');
 
-    // Pass if it's a link to /reservations ...
+    // Pass if it's a link to the reservations section on the home page ...
     const hasReservationLink =
-      /<a[^>]*href=(["'])\/reservations\1[^>]*>[\s\S]*?Book a reservation[\s\S]*?<\/a>/i.test(
+      /<a[^>]*href=(["'])\/?#reservations\1[^>]*>[\s\S]*?Book a reservation[\s\S]*?<\/a>/i.test(
         html
       );
 
