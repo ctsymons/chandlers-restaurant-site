@@ -10,4 +10,10 @@ describe('Footer', () => {
     expect(html).toContain(year);
     expect(html).toContain('Chandlers');
   });
+
+  it('includes navigation links', () => {
+    const html = renderToString(<Footer />);
+    expect(html).toContain('Menu');
+    expect(html).toContain('Reservations');
+  });
 });
