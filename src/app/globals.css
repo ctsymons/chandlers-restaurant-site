@@ -4,9 +4,9 @@
 
 /* Tweak these to fit your design */
 :root {
-  --hero-h: clamp(360px, 55vh, 640px); /* visual height of the top hero */
-  --gap: 24px;                         /* space between hero and the two tiles */
-  --tile-h: 400px;                     /* height of each bottom tile */
+  --hero-h: 100vh; /* visual height of the top hero */
+  --gap: 24px;     /* space between hero and the two tiles */
+  --tile-h: 400px; /* height of each bottom tile */
 }
 
 html { scroll-behavior: smooth; }
