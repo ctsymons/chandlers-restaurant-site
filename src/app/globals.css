@@ -11,7 +11,7 @@ body {
   background-color: #f8f8f8; /* fallback color */
   /* Use a local restaurant-themed image for the home page background */
   background-image: url('/images/chandlers-barton-art-1.jpg');
-  background-size: cover;
+  background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
   color: #1f2937;
