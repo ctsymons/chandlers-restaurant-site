@@ -9,11 +9,12 @@ html {
 body {
   font-family: system-ui, sans-serif;
   background-color: #f8f8f8; /* fallback color */
-  /* Use a local restaurant-themed image for the home page background */
-  background-image: url('/images/chandlers-barton-art-1.jpg');
-  background-size: auto;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* Use local restaurant-themed images for a scrolling collage */
+  background-image: url('/images/chandlers-barton-art-1.jpg'),
+    url('/chandlers-bloody.webp');
+  background-size: auto, 400px;
+  background-position: center top, right 0 top 700px;
+  background-repeat: no-repeat, no-repeat;
   color: #1f2937;
   line-height: 1.5;
 }

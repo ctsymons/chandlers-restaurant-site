@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import ReservationsPage from './reservations/page';
+import MenuPage from './menu/page';
 import PrivateEventsPage from './private-events/page';
 import OurStoryPage from './our-story/page';
 import EmploymentPage from './employment/page';
@@ -25,6 +26,7 @@ export default function HomePage() {
         </div>
       </section>
       <ReservationsPage />
+      <MenuPage />
       <PrivateEventsPage />
       <OurStoryPage />
       <EmploymentPage />
