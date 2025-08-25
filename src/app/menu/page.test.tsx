@@ -19,6 +19,5 @@ describe('MenuPage', () => {
     expect(html).toContain('Dinner Additions');
     expect(html).toContain('href="/menu/full-wine-list"');
     expect(html).toContain('Full Wine List');
-    expect(html).toContain('Chandler&#x27;s Bloody Mary');
   });
 });

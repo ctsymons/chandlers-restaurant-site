@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const menuItems = [
   { name: 'Drinks', href: '/menu/drinks' },
@@ -13,7 +12,7 @@ const menuItems = [
 export default function MenuPage() {
   return (
     <section className="flex items-center justify-center py-24">
-      <div className="bg-black/70 p-4 rounded flex items-center space-x-4">
+      <div className="bg-black/70 p-4 rounded">
         <div className="flex flex-col items-center">
           <h1 className="text-4xl font-bold text-white">Menu</h1>
           <div className="mt-4 flex flex-col space-y-2 w-full">
@@ -28,13 +27,6 @@ export default function MenuPage() {
             ))}
           </div>
         </div>
-        <Image
-          src="/chandlers-bloody.webp"
-          alt="Chandler's Bloody Mary"
-          width={300}
-          height={400}
-          className="rounded"
-        />
       </div>
     </section>
   );
