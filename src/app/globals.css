@@ -2,41 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
+/* Tweak these to fit your design */
+:root {
+  --hero-h: clamp(360px, 55vh, 640px); /* visual height of the top hero */
+  --gap: 24px;                         /* space between hero and the two tiles */
+  --tile-h: 400px;                     /* height of each bottom tile */
 }
+
+html { scroll-behavior: smooth; }
 
 body {
   font-family: system-ui, sans-serif;
-  background-color: #f8f8f8; /* fallback color */
-  /* Use local restaurant-themed images for a scrolling collage */
-  background-image: url('/images/chandlers-barton-art-1.jpg'),
-    url('/images/chandlers-bloody.jpg'),
-    url('/images/chandlers-wine-crates.jpg');
-  background-size: auto, 50% 400px, 50% 400px;
-  background-position: center top, left 0 top 700px, right 0 top 700px;
-  background-repeat: no-repeat, no-repeat, no-repeat;
+
+  /* Layered backgrounds:
+     1) Right tile (on top), 2) Left tile, 3) Hero (behind), then a fallback color */
+  background:
+    url('/images/chandlers-wine-crates.jpg') right 0 top calc(var(--hero-h) + var(--gap)) / 50% var(--tile-h) no-repeat,
+    url('/images/chandlers-bloody.jpg')      left  0 top calc(var(--hero-h) + var(--gap)) / 50% var(--tile-h) no-repeat,
+    url('/images/chandlers-barton-art-1.jpg') center top / cover no-repeat
+    #f8f8f8;
+
+  /* Ensure there’s enough page height to actually reveal the lower row */
+  min-height: calc(var(--hero-h) + var(--gap) + var(--tile-h) + 1px);
+
   color: #1f2937;
   line-height: 1.5;
 }
 
+/* Typography from your earlier setup */
 h1, .site-title {
   font-family: "Copperplate";
   font-weight: bold;
   text-transform: uppercase;
 }
-
-h2, h3, h4, h5, h6 {
-  font-family: Georgia, serif;
-  font-weight: 600;
-}
-
-a {
-  @apply text-primary underline-offset-4 hover:underline;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+h2, h3, h4, h5, h6 { font-family: Georgia, serif; font-weight: 600; }
+a { @apply text-primary underline-offset-4 hover:underline; }
+img { max-width: 100%; height: auto; display: block; }
