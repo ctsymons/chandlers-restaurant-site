@@ -11,10 +11,11 @@ body {
   background-color: #f8f8f8; /* fallback color */
   /* Use local restaurant-themed images for a scrolling collage */
   background-image: url('/images/chandlers-barton-art-1.jpg'),
-    url('/chandlers-bloody.webp');
-  background-size: auto, 400px;
-  background-position: center top, right 0 top 700px;
-  background-repeat: no-repeat, no-repeat;
+    url('/images/chandlers-bloody.jpg'),
+    url('/images/chandlers-wine-crates.jpg');
+  background-size: auto, 50% 400px, 50% 400px;
+  background-position: center top, left 0 top 700px, right 0 top 700px;
+  background-repeat: no-repeat, no-repeat, no-repeat;
   color: #1f2937;
   line-height: 1.5;
 }
