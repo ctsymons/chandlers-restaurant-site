@@ -1,14 +1,13 @@
 import React from 'react';
-import { MENU_PLACEHOLDER } from '../placeholder-image';
 
 export default function DrinksMenuPage() {
   return (
     <section className="flex items-center justify-center py-24">
       <div className="bg-black/70 p-4 rounded flex flex-col items-center w-full">
         <h1 className="text-4xl font-bold text-white">Drinks Menu</h1>
-        <img
-          src={MENU_PLACEHOLDER}
-          alt="Drinks Menu"
+        <iframe
+          src="https://static1.squarespace.com/static/57f6bcbf197aea89dbc60ea2/t/6843481d88be6520083a0c4a/1749239838077/CURRENTJune+Drink+List.pdf"
+          title="Drinks Menu"
           className="mt-4 w-full h-[80vh]"
         />
       </div>
