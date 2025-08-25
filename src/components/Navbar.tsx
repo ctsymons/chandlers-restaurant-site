@@ -36,6 +36,11 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/private-events" className="block px-4 py-2 hover:bg-black/60">
+                    Private Events
+                  </Link>
+                </li>
+                <li>
                   <Link href="/our-story" className="block px-4 py-2 hover:bg-black/60">
                     Our Story
                   </Link>
