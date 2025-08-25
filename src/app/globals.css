@@ -2,29 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Tweak these to fit your design */
-:root {
-  --hero-h: 100vh; /* visual height of the top hero */
-  --gap: 24px;     /* space between hero and the two tiles */
-  --tile-h: 400px; /* height of each bottom tile */
-}
-
 html { scroll-behavior: smooth; }
 
 body {
   font-family: system-ui, sans-serif;
-
-  /* Layered backgrounds:
-     1) Right tile (on top), 2) Left tile, 3) Hero (behind), then a fallback color */
-  background:
-    url('/images/chandlers-wine-crates.jpg') right 0 top calc(var(--hero-h) + var(--gap)) / 50% var(--tile-h) no-repeat,
-    url('/images/chandlers-bloody.jpg')      left  0 top calc(var(--hero-h) + var(--gap)) / 50% var(--tile-h) no-repeat,
-    url('/images/chandlers-barton-art-1.jpg') center top / cover no-repeat
-    #f8f8f8;
-
-  /* Ensure there’s enough page height to actually reveal the lower row */
-  min-height: calc(var(--hero-h) + var(--gap) + var(--tile-h) + 1px);
-
+  background-color: #f8f8f8;
   color: #1f2937;
   line-height: 1.5;
 }
@@ -37,4 +19,4 @@ h1, .site-title {
 }
 h2, h3, h4, h5, h6 { font-family: Georgia, serif; font-weight: 600; }
 a { @apply text-primary underline-offset-4 hover:underline; }
-img { max-width: 100%; height: auto; display: block; }
+img { display: block; }
