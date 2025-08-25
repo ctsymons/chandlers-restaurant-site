@@ -4,9 +4,10 @@ import LunchMenuPage from './page';
 import { describe, it, expect } from 'vitest';
 
 describe('LunchMenuPage', () => {
-  it('renders lunch menu placeholder', () => {
+  it('renders lunch menu PDF', () => {
     const html = renderToString(<LunchMenuPage />);
     expect(html).toContain('Lunch Menu');
-    expect(html).toContain('Menu coming soon');
+    expect(html).toContain('chandlers-lunch.pdf');
+    expect(html).toContain('<iframe');
   });
 });

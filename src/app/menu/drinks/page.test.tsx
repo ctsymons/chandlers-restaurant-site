@@ -4,9 +4,10 @@ import DrinksMenuPage from './page';
 import { describe, it, expect } from 'vitest';
 
 describe('DrinksMenuPage', () => {
-  it('renders drinks menu placeholder', () => {
+  it('renders drinks menu PDF', () => {
     const html = renderToString(<DrinksMenuPage />);
     expect(html).toContain('Drinks Menu');
-    expect(html).toContain('Menu coming soon');
+    expect(html).toContain('chandlers-drinks.pdf');
+    expect(html).toContain('<iframe');
   });
 });
