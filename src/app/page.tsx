@@ -11,7 +11,7 @@ import ContactsPage from './contacts/page';
 export default function HomePage() {
   return (
     <>
-      <section className="flex min-h-screen items-center justify-center py-24">
+      <section className="flex min-h-screen items-center justify-center">
         <div className="bg-black/70 p-6 rounded-xl flex flex-col items-center">
           <h1 className="text-6xl font-bold text-white">Welcome to Chandlers</h1>
 
