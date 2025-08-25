@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ParallaxBackground from "@/components/ParallaxBackground";
 
 export const metadata = {
   title: {
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col">
+        <ParallaxBackground />
         <Navbar />
         <main className="flex-1">
           {children}
