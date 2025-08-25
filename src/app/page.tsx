@@ -9,6 +9,14 @@ import EmploymentPage from './employment/page';
 import ContactsPage from './contacts/page';
 
 export default function HomePage() {
+  const handleScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    targetId: string
+  ) => {
+    e.preventDefault();
+    document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       <section className="flex min-h-screen items-center justify-center">
@@ -20,6 +28,7 @@ export default function HomePage() {
             className="mt-4 bg-black text-white px-4 py-2 rounded"
             style={{ fontFamily: 'Copperplate', fontWeight: 'bold' }}
             aria-label="Book a reservation"
+            onClick={(e) => handleScroll(e, 'reservations')}
           >
             Book a reservation
           </Link>

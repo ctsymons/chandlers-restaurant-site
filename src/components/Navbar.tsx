@@ -6,6 +6,19 @@ import Link from 'next/link';
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
+  const handleScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    targetId: string
+  ) => {
+    if (window.location.pathname === '/') {
+      e.preventDefault();
+      document.getElementById(targetId)?.scrollIntoView({
+        behavior: 'smooth',
+      });
+      setOpen(false);
+    }
+  };
+
   return (
     <nav className="bg-black/70 text-white">
       <div className="mx-auto max-w-7xl px-4 py-6 flex justify-between items-center">
@@ -23,7 +36,11 @@ export default function Navbar() {
           {open && (
               <ul className="absolute right-0 mt-2 w-40 bg-black/80 rounded shadow-lg">
                 <li>
-                  <Link href="/menu" className="block px-4 py-2 hover:bg-black/60">
+                  <Link
+                    href="/menu"
+                    className="block px-4 py-2 hover:bg-black/60"
+                    onClick={() => setOpen(false)}
+                  >
                     Menu
                   </Link>
                 </li>
@@ -31,27 +48,44 @@ export default function Navbar() {
                   <Link
                     href="/#reservations"
                     className="block px-4 py-2 hover:bg-black/60"
+                    onClick={(e) => handleScroll(e, 'reservations')}
                   >
                     Reservations
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#private-events" className="block px-4 py-2 hover:bg-black/60">
+                  <Link
+                    href="/#private-events"
+                    className="block px-4 py-2 hover:bg-black/60"
+                    onClick={(e) => handleScroll(e, 'private-events')}
+                  >
                     Private Events
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#our-story" className="block px-4 py-2 hover:bg-black/60">
+                  <Link
+                    href="/#our-story"
+                    className="block px-4 py-2 hover:bg-black/60"
+                    onClick={(e) => handleScroll(e, 'our-story')}
+                  >
                     Our Story
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#employment" className="block px-4 py-2 hover:bg-black/60">
+                  <Link
+                    href="/#employment"
+                    className="block px-4 py-2 hover:bg-black/60"
+                    onClick={(e) => handleScroll(e, 'employment')}
+                  >
                     Employment
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#contacts" className="block px-4 py-2 hover:bg-black/60">
+                  <Link
+                    href="/#contacts"
+                    className="block px-4 py-2 hover:bg-black/60"
+                    onClick={(e) => handleScroll(e, 'contacts')}
+                  >
                     Contacts
                   </Link>
                 </li>
